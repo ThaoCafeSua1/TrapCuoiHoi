@@ -1,0 +1,213 @@
+/* Thiết lập font chữ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Loại bỏ margin mặc định của body */
+}
+
+/* Thiết lập bố cục và kích thước */
+.container {
+    width: 80%;
+    
+    margin: auto;
+}
+
+header {
+    
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; /* Thêm padding để tạo khoảng cách trên và dưới header */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header nav h1 {
+    margin: 0; /* Loại bỏ margin mặc định của thẻ h1 */
+}
+
+header nav h1 img {
+    height: 80px; /* Điều chỉnh chiều cao của logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Loại bỏ margin mặc định của thẻ ul */
+    padding: 0; /* Loại bỏ padding mặc định của thẻ ul */
+    align-items: center; /* Căn giữa các phần tử trong danh sách */
+}
+
+header nav ul li {
+    margin-right: 120px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0; /* Loại bỏ margin-right của phần tử cuối cùng */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #E695AB;
+    font-weight: bold
+}
+
+.banner {
+    background-color: #FAE0E8;
+    padding: 20px 0; /* Giảm padding từ 100px xuống 50px */
+    text-align: center;
+}
+
+.banner-content {
+    max-width: 800px; /* Giới hạn chiều rộng của nội dung */
+    margin: 0 auto; /* Canh giữa nội dung */
+}
+
+.banner-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 10px; /* Thêm khoảng cách giữa các đoạn văn bản */
+}
+
+
+
+/* Định nghĩa hiệu ứng nhấp nháy cho phần tử có lớp "blink" */
+.blink {
+    animation: blinkAnimation 1s infinite alternate;
+}
+
+/* Định nghĩa keyframes cho hiệu ứng nhấp nháy */
+@keyframes blinkAnimation {
+    0% {
+        color: #000; /* Màu ban đầu */
+    }
+    100% {
+        color: #ff0000; /* Màu thay đổi */
+    }
+}
+.star-rating {
+    color: #ff0000; /* Màu đỏ */
+}
+
+@keyframes starBlink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.star-rating .fa-star {
+    animation: starBlink 1s infinite;
+}
+
+
+
+.content {
+    padding: 50px 0;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.services .href {
+    text-decoration: none;
+    color: #000;
+}
+.service i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+.gallery {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; /* Cho phép cuộn ngang nếu cần thiết */
+}
+
+.image {
+    flex-shrink: 0; /* Ngăn các ảnh co lại để vừa với không gian cha */
+    width: 300px; /* Độ rộng cố định cho mỗi ảnh */
+    height: 270px; /* Độ cao cố định cho mỗi ảnh */
+    margin: 10px; /* Khoảng cách giữa các ảnh */
+    overflow: hidden; /* Ẩn phần dư thừa của ảnh nếu có */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+    border-radius: 10px; /* Bo góc cho ảnh */
+    animation: slide 15s linear infinite; /* Sử dụng animation với tên slide, thời gian 10s, linear easing, và lặp vô hạn */
+}
+
+.image img {
+    width: 100%; /* Ảnh sẽ lấp đầy toàn bộ không gian của phần tử cha */
+    height: auto; /* Duy trì tỷ lệ khung hình */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); } /* Tại thời điểm bắt đầu, ảnh ở vị trí ban đầu */
+    100% { transform: translateX(-100%); } /* 100% sau, ảnh di chuyển sang trái và ra khỏi khung hình */
+}
+
+/* .image:hover img {
+    transform: scale(1.75); /* Phóng to ảnh khi rê chuột qua */
+/* } */ 
+
+footer {
+    background-color: #FAE0E8;
+    color: black;
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container p {
+    margin: 10px 0;
+}
+
+.container p a {
+    color: black;
+    text-decoration: none;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+}
+
+.fa {
+    margin-right: 5px;
+}
